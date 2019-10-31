@@ -6,7 +6,7 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a> -->
 
-  <h3 align="center">Portfolio Yair Fernando :smile:</h3>
+  <h3 align="center">Portfolio Yair Fernando</h3>
 
   <p align="center">
     This is my personal portfolio where you can find my personal projects and more
