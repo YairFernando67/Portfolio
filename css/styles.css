@@ -1,0 +1,140 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: #f6f9fc;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar-container .navbar {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.2rem;
+  margin-top: 40px;
+  width: 286px;
+  padding: 0;
+}
+
+.navbar-container .navbar {
+  list-style: none;
+}
+
+.navbar-container .navbar a {
+  padding: 0 25px;
+  color: #5a5d7a;
+  text-decoration: none;
+  position: relative;
+  transition: 0.2s ease-in-out;
+}
+
+.navbar-container .navbar a:hover {
+  color: #7795f9;
+  opacity: 0.8;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+.navbar-container .navbar a:hover::after {
+  display: block;
+  position: absolute;
+  left: 15%;
+  bottom: -20px;
+  width: 70%;
+  height: 8px;
+  background-color: #747fe0;
+  content: " ";
+  transition: width 0.15s;
+  transition-property: width;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+}
+
+.hero-container {
+  font-size: 4.5em;
+  color: #747fe0;
+  margin: 0 auto;
+  margin-top: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.hero-container .bounce {
+  position: absolute;
+  width: 48px;
+  height: 58px;
+  color: #747fe0;
+  background: url("https://d30y9cdsu7xlg0.cloudfront.net/png/10897-200.png") center center no-repeat;
+  background-size: 47px;
+  margin: auto;
+  top: 40px;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  animation: bounce 4s infinite;
+}
+
+@keyframes bounce {
+  10%,
+  20%,
+  30%,
+  40%,
+  50% {
+    transform: translateY(0);
+  }
+  15% {
+    transform: translateY(-30px);
+  }
+  25% {
+    transform: translateY(-15px);
+  }
+  35% {
+    transform: translateY(-5px);
+  }
+  45% {
+    transform: translateY(-2px);
+  }
+}
+
+.hero-container .title {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+  typing 3.5s steps(40, end),
+  blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 70% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgba(116, 127, 224, 0.65); }
+}
+
+/* .hero-container .title ::before {
+  content: ">\A0";
+} */
