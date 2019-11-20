@@ -354,6 +354,34 @@ svg:not(:root).svg-inline--fa {
   vertical-align: -0.125em;
 }
 
+@media (max-width: 1024px) {
+  .projects-container .project-card .project-content {
+    width: 100%;
+    padding: 2.5rem !important;
+  }
+
+  .projects-container .project-card .project-image {
+    display: none;
+  }
+
+  .projects-container .project-card .project-background {
+    width: 100%;
+    height: 100%;
+  }
+
+  .projects-container .project-card .project-background-2 {
+    height: 100%;
+  }
+
+  .projects-container .project-card {
+    max-height: none;
+  }
+
+  .projects-container .project-card .project-content p {
+    font-size: 15px;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-container .title {
     font-size: 2.3em;
