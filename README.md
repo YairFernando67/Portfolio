@@ -44,6 +44,7 @@ The project was developed using these tools and technologies.
 * [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
 * [HTML5](https://www.w3schools.com/html/)
 * [Reset CSS File](https://necolas.github.io/normalize.css/)
+* [Bootstrap](https://getbootstrap.com/)
 
 
 <!-- CONTACT -->
