@@ -42,6 +42,18 @@ body {
   transition: 0.2s ease-in-out;
 }
 
+.navbar-container .navbar a::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  width: 0;
+  height: 8px;
+  background: #747fe0;
+  content: "";
+  transition: width 0.15s;
+}
+
 .navbar-container .navbar a:hover {
   color: #7795f9;
   opacity: 0.8;
@@ -189,6 +201,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #747fe0;
   transition: 0.1s ease-in-out;
 }
 
@@ -229,6 +242,10 @@ a:hover {
   margin: 0 auto;
   margin-top: 30px;
   width: 50px;
+}
+
+h2.m-top {
+  margin-top: 7rem;
 }
 
 .projects-container {
@@ -362,6 +379,70 @@ svg:not(:root).svg-inline--fa {
   vertical-align: -0.125em;
 }
 
+.contact-links {
+  font-size: 1.2em;
+  text-align: center;
+  margin-top: 150px;
+  padding-bottom: 200px;
+}
+
+.contact-links span::after {
+  content: "||";
+  color: #525f7f;
+  margin: 0 30px;
+}
+
+.contact-links a {
+  position: relative;
+  text-decoration: none;
+  color: #5a5d7a;
+}
+
+.contact-links a::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  width: 0;
+  height: 8px;
+  background: #747fe0;
+  content: "";
+  transition: width 0.15s;
+}
+
+.contact-links a:hover {
+  color: #7795f8;
+  opacity: 0.8;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+.contact-links a:hover::after {
+  display: block;
+  position: absolute;
+  left: 15%;
+  bottom: -20px;
+  width: 70%;
+  height: 8px;
+  background-color: #747fe0;
+  content: " ";
+  transition: width 0.15s;
+  transition-property: width;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+}
+
+.footer {
+  margin: 0 auto;
+  font-size: 0.8em;
+  line-height: 1.5em;
+  text-align: center;
+  padding-bottom: 50px;
+  color: #525f7f;
+  font-family: 'Montserrat', sans-serif;
+}
+
 @media (max-width: 1024px) {
   .projects-container .project-card .project-content {
     width: 100%;
@@ -407,5 +488,23 @@ svg:not(:root).svg-inline--fa {
 
   .navbar-container .navbar a {
     font-size: 1rem;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    padding-bottom: 100px;
+    margin-top: 100px;
+  }
+
+  .contact-links a {
+    margin-left: 50px;
+  }
+
+  .contact-links span {
+    margin-bottom: 25px;
+  }
+
+  .contact-links span::after {
+    content: "";
   }
 }
