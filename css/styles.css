@@ -257,6 +257,14 @@ a:hover {
   left: -5%;
 }
 
+.projects-container .project-card .left-message {
+  left: -20%;
+}
+
+.projects-container .project-card .left-tweeter {
+  left: -10%;
+}
+
 .projects-container .project-card .project-background {
   position: absolute;
   top: -1px;
