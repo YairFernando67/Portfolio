@@ -13,7 +13,7 @@ body {
 .container {
   max-width: 1150px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 40px;
 }
 
 .navbar-container {
@@ -99,7 +99,8 @@ body {
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-  from, to { border-color: transparent; }
+  from,
+  to { border-color: transparent; }
   20% { border-color: rgba(116, 127, 224, 0.65); }
 }
 
@@ -130,6 +131,88 @@ body {
 
 .home-container .description a:hover {
   opacity: 0.8;
+}
+
+.about-container {
+  margin-top: 20vh;
+  margin: 0 auto;
+}
+
+.about-container .terminal .terminal-header {
+  height: 28px;
+  background: #e4e3e5;
+  border-radius: 10px 10px 0 0;
+}
+
+.about-container .terminal .terminal-header .red {
+  background: #f96256;
+  border: 1px solid #f65549;
+}
+
+.about-container .terminal .terminal-header .header-button {
+  width: 15px;
+  height: 15px;
+}
+
+.about-container .terminal .terminal-header .yellow {
+  background-color: #fdbc3d;
+  border: 1px solid #ffb524;
+}
+
+.about-container .terminal .terminal-header .green {
+  background-color: #33c948;
+  border: 1px solid #2dbb41;
+}
+
+.about-container .terminal .terminal-window {
+  background: #5a5d7a;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 50px 100px rgba(50, 50, 93, 0.15), 0 15px 35px rgba(50, 50, 93, 0.2), 0 5px 15px rgba(0, 0, 0, 0.12);
+  /* font-family: 'Roboto Slab', serif; */
+  font-family: 'Montserrat', sans-serif;
+}
+
+.about-container .terminal .terminal-window .statement {
+  line-height: 24px;
+}
+
+.about-container .terminal .terminal-window .statement .input-statement {
+  color: #f7f7f7;
+}
+
+.about-container .terminal .terminal-window .statement .input-statement::before {
+  content: ">\A0";
+}
+
+.about-container .terminal .terminal-window .statement .return-statement {
+  color: #e7d184;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.1s ease-in-out;
+}
+
+a:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.about-container .terminal .terminal-window a {
+  color: #35feff;
+}
+
+.about-container .terminal .terminal-window .statement span {
+  border-color: #f7f7f7;
+  border-right: 0.05em solid;
+  border-width: 10px;
+  animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
 }
 
 @media (max-width: 768px) {
