@@ -567,4 +567,8 @@ div.icon-container .scrollup i.fas {
     font-size: 2.1em;
     width: 298px;
   }
+
+  .hero-container .title::before {
+    left: -1%;
+  }
 }
