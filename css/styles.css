@@ -564,6 +564,16 @@ div.icon-container .scrollup i.fas {
     width: 298px;
   }
 
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 298px;
+    }
+  }
+
   .hero-container .title::before {
     left: -1%;
   }
