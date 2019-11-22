@@ -536,13 +536,14 @@ div.icon-container .scrollup i.fas {
 
   .contact-links {
     flex-direction: column;
+    padding: 40px;
     padding-bottom: 100px;
     margin-top: 100px;
   }
 
-  .contact-links a {
+  /* .contact-links a {
     margin-left: 50px;
-  }
+  } */
 
   .contact-links span {
     margin-bottom: 25px;
@@ -550,5 +551,20 @@ div.icon-container .scrollup i.fas {
 
   .contact-links span::after {
     content: "";
+  }
+}
+
+@media (max-width: 440px) {
+  /* .contact-links a.email {
+    margin-left: 0;
+  } */
+
+  div.icon-container {
+    left: 80%;
+  }
+
+  .hero-container .title {
+    font-size: 2.1em;
+    width: 298px;
   }
 }
