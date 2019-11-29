@@ -560,8 +560,8 @@ div.icon-container .scrollup i.fas {
   }
 
   .hero-container .title {
-    font-size: 1.9em;
-    width: 298px;
+    font-size: 1.8em;
+    width: 260px;
   }
 
   @keyframes typing {
@@ -570,12 +570,12 @@ div.icon-container .scrollup i.fas {
     }
 
     to {
-      width: 298px;
+      width: 260px;
     }
   }
 
-  .hero-container .title::before {
-    left: -1%;
+  .hero-container .title p {
+    left: -23px;
   }
 
   .contact-links {
