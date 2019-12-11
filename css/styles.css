@@ -34,6 +34,11 @@ body {
   list-style: none;
 }
 
+.contact-links-mobile a {
+  padding: 15px;
+  transition: transform 0.7s;
+}
+
 .navbar-container .navbar a {
   padding: 0 25px;
   color: #5a5d7a;
@@ -52,11 +57,6 @@ body {
   background: #747fe0;
   content: "";
   transition: width 0.15s;
-}
-
-.contact-links-mobile a {
-  padding: 15px;
-  transition: transform 0.7s;
 }
 
 .contact-links-mobile a:hover {
