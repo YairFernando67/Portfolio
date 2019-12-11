@@ -375,6 +375,14 @@ h2.m-top {
   color: #747fe0;
 }
 
+.projects-container .project-card .mini-img {
+  position: absolute;
+  z-index: 5;
+  bottom: 5px;
+  right: 5px;
+  opacity: 0.4;
+}
+
 svg:not(:root).svg-inline--fa {
   overflow: visible;
 }
@@ -536,6 +544,10 @@ div.icon-container .scrollup i.fas {
 
   .mobile-links {
     display: block;
+  }
+
+  .mini-img {
+    display: none;
   }
 }
 
