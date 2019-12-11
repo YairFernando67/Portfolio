@@ -54,6 +54,15 @@ body {
   transition: width 0.15s;
 }
 
+.contact-links-mobile a {
+  padding: 15px;
+  transition: transform 0.7s;
+}
+
+.contact-links-mobile a:hover {
+  transform: rotateY(360deg);
+}
+
 .navbar-container .navbar a:hover {
   color: #7795f9;
   opacity: 0.8;
@@ -469,15 +478,6 @@ svg:not(:root).svg-inline--fa {
 
 .contact-links-mobile {
   margin: 100px 0;
-}
-
-.contact-links-mobile a {
-  padding: 15px;
-  transition: transform 0.7s;
-}
-
-.contact-links-mobile a:hover {
-  transform: rotateY(360deg);
 }
 
 .footer {
