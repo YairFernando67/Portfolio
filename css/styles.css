@@ -420,6 +420,12 @@ svg:not(:root).svg-inline--fa {
   margin: 0 30px;
 }
 
+.contact-links span:last-child::after {
+  content: "";
+  color: #525f7f;
+  margin: 0 30px;
+}
+
 .contact-links a {
   position: relative;
   text-decoration: none;
@@ -601,8 +607,8 @@ div.icon-container .scrollup i.fas {
   }
 
   .hero-container .title {
-    font-size: 1.8em;
-    width: 260px;
+    font-size: 1.7em;
+    width: 244px;
   }
 
   @keyframes typing {
@@ -611,7 +617,7 @@ div.icon-container .scrollup i.fas {
     }
 
     to {
-      width: 260px;
+      width: 244px;
     }
   }
 
