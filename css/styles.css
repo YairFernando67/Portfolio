@@ -398,6 +398,14 @@ svg:not(:root).svg-inline--fa {
   padding-bottom: 200px;
 }
 
+.desktop-links {
+  display: block;
+}
+
+.mobile-links {
+  display: none;
+}
+
 .contact-links span::after {
   content: "||";
   color: #525f7f;
@@ -443,6 +451,19 @@ svg:not(:root).svg-inline--fa {
   transition-duration: 0.15s;
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
+}
+
+.contact-links-mobile {
+  margin: 100px 0;
+}
+
+.contact-links-mobile a {
+  padding: 15px;
+  transition: transform 0.7s;
+}
+
+.contact-links-mobile a:hover {
+  transform: rotateY(360deg);
 }
 
 .footer {
@@ -507,6 +528,14 @@ div.icon-container .scrollup i.fas {
 
   .projects-container .project-card .project-content p {
     font-size: 15px;
+  }
+
+  .desktop-links {
+    display: none;
+  }
+
+  .mobile-links {
+    display: block;
   }
 }
 
@@ -580,5 +609,13 @@ div.icon-container .scrollup i.fas {
 
   .contact-links {
     padding: 0 5px 40px 54px;
+  }
+
+  .contact-links-mobile a {
+    padding: 10px;
+  }
+
+  .contact-links-mobile a img {
+    width: 40px;
   }
 }
