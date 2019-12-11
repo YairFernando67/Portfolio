@@ -34,6 +34,11 @@ body {
   list-style: none;
 }
 
+.contact-links-mobile a {
+  padding: 15px;
+  transition: transform 0.7s;
+}
+
 .navbar-container .navbar a {
   padding: 0 25px;
   color: #5a5d7a;
@@ -52,6 +57,10 @@ body {
   background: #747fe0;
   content: "";
   transition: width 0.15s;
+}
+
+.contact-links-mobile a:hover {
+  transform: rotateY(360deg);
 }
 
 .navbar-container .navbar a:hover {
@@ -375,6 +384,14 @@ h2.m-top {
   color: #747fe0;
 }
 
+.projects-container .project-card .mini-img {
+  position: absolute;
+  z-index: 5;
+  bottom: 5px;
+  right: 5px;
+  opacity: 0.4;
+}
+
 svg:not(:root).svg-inline--fa {
   overflow: visible;
 }
@@ -398,8 +415,22 @@ svg:not(:root).svg-inline--fa {
   padding-bottom: 200px;
 }
 
+.desktop-links {
+  display: block;
+}
+
+.mobile-links {
+  display: none;
+}
+
 .contact-links span::after {
   content: "||";
+  color: #525f7f;
+  margin: 0 30px;
+}
+
+.contact-links span:last-child::after {
+  content: "";
   color: #525f7f;
   margin: 0 30px;
 }
@@ -443,6 +474,10 @@ svg:not(:root).svg-inline--fa {
   transition-duration: 0.15s;
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
+}
+
+.contact-links-mobile {
+  margin: 100px 0;
 }
 
 .footer {
@@ -508,6 +543,18 @@ div.icon-container .scrollup i.fas {
   .projects-container .project-card .project-content p {
     font-size: 15px;
   }
+
+  .desktop-links {
+    display: none;
+  }
+
+  .mobile-links {
+    display: block;
+  }
+
+  .mini-img {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -560,8 +607,8 @@ div.icon-container .scrollup i.fas {
   }
 
   .hero-container .title {
-    font-size: 1.8em;
-    width: 260px;
+    font-size: 1.7em;
+    width: 244px;
   }
 
   @keyframes typing {
@@ -570,7 +617,7 @@ div.icon-container .scrollup i.fas {
     }
 
     to {
-      width: 260px;
+      width: 244px;
     }
   }
 
@@ -580,5 +627,13 @@ div.icon-container .scrollup i.fas {
 
   .contact-links {
     padding: 0 5px 40px 54px;
+  }
+
+  .contact-links-mobile a {
+    padding: 10px;
+  }
+
+  .contact-links-mobile a img {
+    width: 40px;
   }
 }
