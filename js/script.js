@@ -5,13 +5,13 @@ $(function () {
       $('.icon-container').css({
         'display': 'block',
       });
-      $('.navbar-container').css({
-        'background': '#92AAF9',
-        'opacity': '0.6',
-      });
-      $('.navbar-container .navbar a ').css({
-        'color': 'black',
-      });
+      // $('.navbar-container').css({
+      //   'background': '#92AAF9',
+      //   'opacity': '0.6',
+      // });
+      // $('.navbar-container .navbar a ').css({
+      //   'color': 'black',
+      // });
     } else {
       $('.icon-container').css({
         'display': 'none',
@@ -19,12 +19,12 @@ $(function () {
       $('.scrollup').css({
         'cursor': 'pointer',
       });
-      $('.navbar-container').css({
-        'background': 'transparent',
-      });
-      $('.navbar-container .navbar a ').css({
-        'color': '#5a5d7a',
-      });
+      // $('.navbar-container').css({
+      //   'background': 'transparent',
+      // });
+      // $('.navbar-container .navbar a ').css({
+      //   'color': '#5a5d7a',
+      // });
     }
   });
 });
