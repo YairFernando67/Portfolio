@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="shortcut icon" href="img/favicon.png">
+  <link rel="shortcut icon" href="img/fav.png">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
   <script src="https://kit.fontawesome.com/819c4780a4.js" crossorigin="anonymous"></script>
@@ -29,18 +29,18 @@
 </head>
 
 <body>
+  <header class="navbar-container sticky-top">
+    <nav>
+      <ul class="navbar">
+        <a href="#projects"
+          onclick="$('#projects').animatescroll({scrollSpeed:2000,easing:'easeOutQuart'});">Projects </a>
+        <a href="#contact"
+          onclick="$('#contact').animatescroll({scrollSpeed:2000,easing:'easeOutQuart'});">Contact</a>
+      </ul>
+    </nav>
+  </header>
   <div class="container">
     <div class="home-container">
-      <header class="navbar-container sticky-top">
-        <nav>
-          <ul class="navbar">
-            <a href="#projects"
-              onclick="$('#projects').animatescroll({scrollSpeed:2000,easing:'easeOutQuart'});">Projects </a>
-            <a href="#contact"
-              onclick="$('#contact').animatescroll({scrollSpeed:2000,easing:'easeOutQuart'});">Contact</a>
-          </ul>
-        </nav>
-      </header>
       <div class="hero-container">
         <div class="title">
           <p>
@@ -138,120 +138,23 @@
       <h2 id="projects" class="section-title pt-5 mt-5 mb-5">
         Projects</h2>
       <section class="projects-container">
-        <div class="project-card d-flex flex-row justify-content-end mb-5 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s" data-wow-offset="3">
-          <img src="img/babyMilestones.PNG" alt="BlogApplication" class="project-image left">
-          <div class="project-background"></div>
-          <div class="project-background-2"></div>
+ 
+        <div class="project-card card-red d-flex flex-row justify-content-end mb-5 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s" data-wow-offset="7">
+          <div class="image-container">
+            <img src="img/youtubeapi.PNG" alt="NYT" class="project-image left-image" />
+          </div>
           <div class="project-content p-5">
-            <h3 class="mb-3"> Baby Milestones API</h3>
-            <p class="mb-3">
-              React and Redux application that makes a request to an API to fetch data and display the milestones that a baby should complete. Used the 
-              middleware redux-thunk to make an async request. Used styled-components and bootstrap to give the styles to the application. And used redux and 
-              localstorage to manage the data.
-            </p>
-            <div class="project-skills d-flex flex-wrap">
-              <span class="project-skill">React</span>
-              <span class="project-skill">Redux</span>
-              <span class="project-skill">Axios</span>
-              <span class="project-skill">Styled-Components</span>
-            </div>
-            <div class="project-links d-flex justify-content-start align-items-center flex-wrap">
-              <a href="https://github.com/YairFernando67/baby_milestone_app" target="_blank" class="project-link secondary">
-                <svg aria-hidden="true" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16 "
-                  role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-reactid="71">
-                  <path fill="currentColor"
-                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                    data-reactid="72"></path>
-                </svg>
-                View Source
-              </a>
-            </div>
-          </div>
-          <div class="mini-img">
-            <img src="img/Webp.net-resizeimage2.png" alt="">
-          </div>
-        </div>
-        <div class="project-card d-flex flex-row justify-content-end mb-5 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s" data-wow-offset="5">
-          <img src="img/starwars.png" alt="Github Page" class="project-image left">
-          <div class="project-background"></div>
-          <div class="project-background-2"></div>
-          <div class="project-content p-5">
-            <h3 class="mb-3">Star Wars Application</h3>
-            <p class="mb-3">
-              Project developed with ruby on rails and react that makes an asyn request to the star wars's api to fetch its films and let the user choose their
-              favorites. Implemented an authentication system using Firebase. Used styled-components, bootstrap, axios, localstorage and redux-thunk.
-            </p>
-            <div class="project-skills d-flex flex-wrap">
-              <span class="project-skill">Ruby on Rails</span>
-              <span class="project-skill">React</span>
-              <span class="project-skill">Redux</span>
-              <span class="project-skill">React-router-dom</span>
-            </div>
-            <div class="project-links d-flex justify-content-start align-items-center flex-wrap">
-              <a href="https://github.com/YairFernando67/React-APIStarWars" target="_blank" class="project-link secondary">
-                <svg aria-hidden="true" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16 "
-                  role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-reactid="71">
-                  <path fill="currentColor"
-                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                    data-reactid="72"></path>
-                </svg>
-                View Source
-              </a>
-            </div>
-          </div>
-          <div class="mini-img">
-            <img src="img/Webp.net-resizeimage3.png" alt="">
-          </div>
-        </div>
-        <div class="project-card d-flex flex-row justify-content-end mb-5 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s" data-wow-offset="6">
-          <img src="img/tasksapp.png" alt="TheNextWeb" class="project-image left">
-          <div class="project-background"></div>
-          <div class="project-background-2"></div>
-          <div class="project-content p-5">
-            <h3 class="mb-3">React Tasks App</h3>
-            <p class="mb-3">
-              A To Do list developed with ruby on rails in the backend, using postgresql as the database and react on the frontend to make asyn requests
-              to the backend and fetch the list of task and display a delete button if the status of the task is completed. Used react-router-dom, styled-components,
-              bootstrap and axios.  
-            </p>
-            <div class="project-skills d-flex flex-wrap">
-              <span class="project-skill">Ruby on Rails</span>
-              <span class="project-skill">React</span>
-              <span class="project-skill">Axios</span>
-              <span class="project-skill">PostgreSQL</span>
-            </div>
-            <div class="project-links d-flex justify-content-start align-items-center flex-wrap">
-              <a href="https://github.com/YairFernando67/tasks-app" target="_blank" class="project-link secondary">
-                <svg aria-hidden="true" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16 "
-                  role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-reactid="71">
-                  <path fill="currentColor"
-                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                    data-reactid="72"></path>
-                </svg>
-                View Source
-              </a>
-            </div>
-          </div>
-          <div class="mini-img">
-            <img src="img/Webp.net-resizeimage.png" alt="">
-          </div>
-        </div>
-        <div class="project-card d-flex flex-row justify-content-end mb-5 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s" data-wow-offset="7">
-          <img src="img/youtubeapi.PNG" alt="NYT" class="project-image left-message">
-          <div class="project-background"></div>
-          <div class="project-background-2"></div>
-          <div class="project-content p-5">
-            <h3 class="mb-3">Youtube API with React</h3>
+            <h3 class="mb-3 color-red">Youtube API with React</h3>
             <p class="mb-3">
               Project developed with React that implements an API using Axios to retrieve data from the Youtube API and display to the browser. 
               Using reusable components and the props system to comunicate parent component with child components.
               The React application implements a network request over to the Youtube API based on the user's search.
             </p>
             <div class="project-skills d-flex flex-wrap">
-              <span class="project-skill">React</span>
-              <span class="project-skill">Axios</span>
-              <span class="project-skill">CSS3</span>
-              <span class="project-skill">FlexBox</span>
+              <span class="project-skill color-red">React</span>
+              <span class="project-skill color-red">Axios</span>
+              <span class="project-skill color-red">CSS3</span>
+              <span class="project-skill color-red">FlexBox</span>
             </div>
             <div class="project-links d-flex justify-content-start align-items-center flex-wrap">
               <a href="https://github.com/YairFernando67/Videos" target="_blank" class="project-link secondary">
@@ -269,28 +172,58 @@
             <img src="img/Webp.net-resizeimage2.png" alt="">
           </div>
         </div>
-        <div class="project-card d-flex flex-row justify-content-end mb-5 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s" data-wow-offset="5">
-          <img src="img/dribble_application2.png" alt="DribbleApplication" class="project-image left">
-          <div class="project-background"></div>
-          <div class="project-background-2"></div>
+        <div class="project-card card-purple d-flex flex-row justify-content-end mb-5 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s" data-wow-offset="6">
+          <div class="image-container">
+            <img src="img/tasksapp.png" alt="TheNextWeb" class="project-image left-image">
+          </div>
           <div class="project-content p-5">
-            <h3 class="mb-3">Dribble Clone</h3>
+            <h3 class="mb-3 color-purple">React Tasks App</h3>
             <p class="mb-3">
-              This project is a clone of Dribble that have some features based on the original app.
-              The project include a user authentication system,
-              as well as user validations for emails and passwords.
-              It includes features like uploading images, making comments and liking posts.
-              It also counts views on each post.</p>
+              A To Do list developed with ruby on rails in the backend, using postgresql as the database and react on the frontend to make asyn requests
+              to the backend and fetch the list of task and display a delete button if the status of the task is completed. Used react-router-dom, styled-components,
+              bootstrap and axios.  
+            </p>
             <div class="project-skills d-flex flex-wrap">
-              <span class="project-skill">HTML5</span>
-              <span class="project-skill">CSS3</span>
-              <span class="project-skill">Ruby and Rails</span>
-              <span class="project-skill">JQuery</span>
-              <span class="project-skill">JavaScript</span>
-              <span class="project-skill">Bulma</span>
+              <span class="project-skill color-purple">Ruby on Rails</span>
+              <span class="project-skill color-purple">React</span>
+              <span class="project-skill color-purple">Axios</span>
+              <span class="project-skill color-purple">PostgreSQL</span>
             </div>
             <div class="project-links d-flex justify-content-start align-items-center flex-wrap">
-              <a href="https://github.com/YairFernando67/Dribble_App" target="_blank" class="project-link secondary">
+              <a href="https://github.com/YairFernando67/tasks-app" target="_blank" class="project-link secondary">
+                <svg aria-hidden="true" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16 "
+                  role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-reactid="71">
+                  <path fill="currentColor"
+                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                    data-reactid="72"></path>
+                </svg>
+                View Source
+              </a>
+            </div>
+          </div>
+          <div class="mini-img">
+            <img src="img/Webp.net-resizeimage.png" alt="">
+          </div>
+        </div>
+        <div class="project-card card-green d-flex flex-row justify-content-end mb-5 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s" data-wow-offset="3">
+          <div class="image-container">
+            <img src="img/babyMilestones.PNG" alt="BlogApplication" class="project-image left-image">
+          </div>
+          <div class="project-content p-5">
+            <h3 class="mb-3 color-green"> Baby Milestones API</h3>
+            <p class="mb-3">
+              React and Redux application that makes a request to an API to fetch data and display the milestones that a baby should complete. Used the 
+              middleware redux-thunk to make an async request. Used styled-components and bootstrap to give the styles to the application. And used redux and 
+              localstorage to manage the data.
+            </p>
+            <div class="project-skills d-flex flex-wrap">
+              <span class="project-skill color-green">React</span>
+              <span class="project-skill color-green">Redux</span>
+              <span class="project-skill color-green">Axios</span>
+              <span class="project-skill color-green">Styled-Components</span>
+            </div>
+            <div class="project-links d-flex justify-content-start align-items-center flex-wrap">
+              <a href="https://github.com/YairFernando67/baby_milestone_app" target="_blank" class="project-link secondary">
                 <svg aria-hidden="true" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16 "
                   role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-reactid="71">
                   <path fill="currentColor"
@@ -305,27 +238,24 @@
             <img src="img/Webp.net-resizeimage2.png" alt="">
           </div>
         </div>
-        <div class="project-card d-flex flex-row justify-content-end mb-5 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s" data-wow-offset="6">
-          <img src="img/message_me_app.png" alt="MessagemeApp" class="project-image left-message">
-          <div class="project-background"></div>
-          <div class="project-background-2"></div>
+        <div class="project-card card-blue d-flex flex-row justify-content-end mb-5 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s" data-wow-offset="5">
+          <div class="image-container">
+            <img src="img/starwars.png" alt="Github Page" class="project-image left-image">
+          </div>
           <div class="project-content p-5">
-            <h3 class="mb-3">Message me App</h3>
+            <h3 class="mb-3 color-blue">Star Wars Application</h3>
             <p class="mb-3">
-              Chat application build with Action cable where the user can send messages
-              in real time, it also inludes user authentication system.
-              It has a clean design using Semantic UI.</p>
+              Project developed with ruby on rails and react that makes an asyn request to the star wars's api to fetch its films and let the user choose their
+              favorites. Implemented an authentication system using Firebase. Used styled-components, bootstrap, axios, localstorage and redux-thunk.
+            </p>
             <div class="project-skills d-flex flex-wrap">
-              <span class="project-skill">HTML5</span>
-              <span class="project-skill">CSS3</span>
-              <span class="project-skill">Ruby</span>
-              <span class="project-skill">Ruby and Rails</span>
-              <span class="project-skill">JQuery</span>
-              <span class="project-skill">Semantic UI</span>
-              <span class="project-skill">JavaScript</span>
+              <span class="project-skill color-blue">Ruby on Rails</span>
+              <span class="project-skill color-blue">React</span>
+              <span class="project-skill color-blue">Redux</span>
+              <span class="project-skill color-blue">React-router-dom</span>
             </div>
             <div class="project-links d-flex justify-content-start align-items-center flex-wrap">
-              <a href="https://github.com/YairFernando67/messageApp" target="_blank" class="project-link secondary">
+              <a href="https://github.com/YairFernando67/React-APIStarWars" target="_blank" class="project-link secondary">
                 <svg aria-hidden="true" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16 "
                   role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-reactid="71">
                   <path fill="currentColor"
@@ -340,23 +270,23 @@
             <img src="img/Webp.net-resizeimage3.png" alt="">
           </div>
         </div>
-        <div class="project-card d-flex flex-row justify-content-end mb-5 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s" data-wow-offset="3">
-          <img src="img/blog_application.png" alt="BlogApplication" class="project-image left">
-          <div class="project-background"></div>
-          <div class="project-background-2"></div>
+        <div class="project-card card-red d-flex flex-row justify-content-end mb-5 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s" data-wow-offset="3">
+          <div class="image-container">
+            <img src="img/blog_application.png" alt="BlogApplication" class="project-image left-image">
+          </div>
           <div class="project-content p-5">
-            <h3 class="mb-3">Blog Application</h3>
+            <h3 class="mb-3 color-red">Blog Application</h3>
             <p class="mb-3">Blog where you can post new articles, make comments, like articles, etc.
               This project was a complete blog with so many features. The project include a user authentication system,
               as well as user validations for emails and passwords.
               It also includes categories for articles and the relationship between these two.</p>
             <div class="project-skills d-flex flex-wrap">
-              <span class="project-skill">HTML5</span>
-              <span class="project-skill">CSS3</span>
-              <span class="project-skill">Ruby</span>
-              <span class="project-skill">Ruby and Rails</span>
-              <span class="project-skill">JQuery</span>
-              <span class="project-skill">Bootstrap</span>
+              <span class="project-skill color-red">HTML5</span>
+              <span class="project-skill color-red">CSS3</span>
+              <span class="project-skill color-red">Ruby</span>
+              <span class="project-skill color-red">Ruby and Rails</span>
+              <span class="project-skill color-red">JQuery</span>
+              <span class="project-skill color-red">Bootstrap</span>
             </div>
             <div class="project-links d-flex justify-content-start align-items-center flex-wrap">
               <a href="https://blog-yair.herokuapp.com/" rel="noopener" target="_blank" class="project-link"
@@ -385,41 +315,6 @@
             <img src="img/Webp.net-resizeimage.png" alt="">
           </div>
         </div>
-        <div class="project-card d-flex flex-row justify-content-end mb-5 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s" data-wow-offset="7">
-          <img src="img/tweeter_application.png" alt="TweeterApplication" class="project-image left-tweeter">
-          <div class="project-background"></div>
-          <div class="project-background-2"></div>
-          <div class="project-content p-5">
-            <h3 class="mb-3">Tweeter Clone</h3>
-            <p class="mb-3">
-              This project was a clone of Tweeter, that allows the user to create and account, log in and create new
-              tweets.
-              It also includes features of a user authentication system.
-              The user can delete their on comments and tweets as well as make new comments in other users's tweets.</p>
-            <div class="project-skills d-flex flex-wrap">
-              <span class="project-skill">HTML5</span>
-              <span class="project-skill">CSS3</span>
-              <span class="project-skill">Ruby</span>
-              <span class="project-skill">Ruby and Rails</span>
-              <span class="project-skill">Bulma</span>
-            </div>
-            <div class="project-links d-flex justify-content-start align-items-center flex-wrap">
-              <a href="https://github.com/YairFernando67/Tweeter_App" target="_blank" class="project-link secondary">
-                <svg aria-hidden="true" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16 "
-                  role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-reactid="71">
-                  <path fill="currentColor"
-                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                    data-reactid="72"></path>
-                </svg>
-                View Source
-              </a>
-            </div>
-          </div>
-          <div class="mini-img">
-            <img src="img/Webp.net-resizeimage.png" alt="">
-          </div>
-        </div>
-        
   
        
 
@@ -472,7 +367,7 @@
         </div>
         <div class="footer d-flex justify-content-center flex-column">
           <span>
-            Made by Yair Facio &copy; 2019 
+            Made by Yair Facio &copy; 2020
           </span>
           <small>Phone: 842-116-68-26</small>
         </div>
