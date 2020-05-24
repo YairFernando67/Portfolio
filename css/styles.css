@@ -9,6 +9,7 @@ body {
   background: #fefcf8;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 .container {
@@ -302,7 +303,7 @@ h2.m-top {
   /* overflow: hidden; */
   max-height: 507px;
   min-height: 430px;
-  width: 80%;
+  width: 77%;
   margin: 0 auto;
 }
 
@@ -766,6 +767,7 @@ div.icon-container .scrollup i.fas {
   .navbar-container {
     background: transparent;
     justify-content: start;
+    position: sticky;
   }
 
   .navbar-container .navbar {
