@@ -6,7 +6,8 @@
 
 body {
   /* background: #f6f9fc; */
-  background: #fefcf8;
+  /* background: #fefcf8; */
+  background: #EBF1F3;
   margin: 0;
   padding: 0;
   position: relative;
@@ -16,6 +17,93 @@ body {
   max-width: 1150px;
   margin: 0 auto;
   padding: 0 40px;
+}
+
+.container .divider {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 10px;
+  padding: 10px;
+}
+
+.container .divider .divider-content {
+  display: block;
+  justify-self: center;
+  text-align: center;
+  grid-column: span 1 / auto;
+}
+
+
+.container .divider .divider-content .div {
+  align-items: initial;
+  display: inline-block;
+  /* background-color: rgb(106, 72, 234); */
+  background-color: #747fe0;
+}
+
+.divider-0 {
+  width: 32px;
+  line-height: 4px;
+  height: 4px;
+  margin-right: 8px;
+  flex: 1 0 auto;
+  border-radius: 2px;
+}
+
+.divider-1 {
+  width: 40px;
+  line-height: 4px;
+  height: 4px;
+  margin-right: 16px;
+  flex: 1 0 auto;
+  border-radius: 2px;
+}
+
+.divider-2 {
+  width: 64px;
+  line-height: 4px;
+  height: 4px;
+  margin-right: 12px;
+  flex: 1 0 auto;
+  border-radius: 2px;
+}
+
+.divider-3 {
+  width: 8px;
+  line-height: 4px;
+  height: 4px;
+  margin-right: 12px;
+  flex: 1 0 auto;
+  border-radius: 2px;
+}
+
+.divider-4 {
+  width: 24px;
+  line-height: 4px;
+  height: 4px;
+  margin-right: 8px;
+  flex: 1 0 auto;
+  border-radius: 2px;
+}
+
+.divider-5 {
+  width: 12px;
+  line-height: 4px;
+  height: 4px;
+  margin-right: 24px;
+  flex: 1 0 auto;
+  border-radius: 2px;
+}
+
+.divider-6 {
+  width: 32px;
+  line-height: 4px;
+  height: 4px;
+  margin-right: 8px;
+  flex: 1 0 auto;
+  border-radius: 2px;
 }
 
 .navbar-container {
@@ -302,8 +390,8 @@ h2.m-top {
   box-shadow: 0 50px 100px rgba(50, 50, 93, 0.05), 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.1);
   /* overflow: hidden; */
   max-height: 507px;
-  min-height: 430px;
-  width: 77%;
+  min-height: 450px;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -400,6 +488,10 @@ h2.m-top {
 .projects-container .project-card .project-content {
   z-index: 2;
   width: 80%;
+}
+
+.projects-container .project-card .padd-right {
+  padding-right: 120px !important;
 }
 
 .projects-container .project-card .project-content h3 {
@@ -500,11 +592,15 @@ h2.m-top {
 }
 
 .projects-container .project-card .mini-img {
-  position: absolute;
+  /* position: absolute;
   z-index: 5;
   bottom: 5px;
   right: 5px;
-  opacity: 0.4;
+  opacity: 0.4; */
+  width: 250px;
+  position: absolute;
+  top: 52%;
+  right: -91px;
 }
 
 svg:not(:root).svg-inline--fa {
