@@ -21,8 +21,10 @@ body {
 }
 
 .projects {
-  padding: 7rem 0;
+  padding: 7rem 0 27rem 0;
   background: #ffffff;
+  --webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
 
 .publications {
@@ -35,13 +37,60 @@ body {
   padding: 7rem 0;
 }
 
+.contact .contact-form form{
+  padding: 4rem 4rem;
+  background: #f7f7f7;
+  height: 40rem;
+  width: 40rem;
+  margin-top: 1rem;
+}
+
+.contact .contact-form form input {
+  border: none;
+  width: 100%;
+  height: 2.5rem;
+  outline: none;
+  padding: 0.2rem 0.8rem;
+}
+.contact .contact-form form input:focus,
+.contact .contact-form form textarea:focus {
+  box-shadow: 0 1rem 2rem rgba(#000, .1);
+  border-bottom: 3px solid #55c57a;
+}
+
+.contact .contact-form form input:focus:invalid,
+.contact .contact-form form textarea:focus:invalid {
+  border-bottom: 3px solid #ff7730;
+}
+
+.contact .contact-form form textarea {
+  border: none;
+  height: 10rem;
+  outline: none;
+  padding: 0.8rem 0.8rem;
+}
+
+.contact .contact-form form button {
+  border: 2px solid #64B557;
+  background: #ffffff;
+  padding: 1rem 0;
+  margin-top: auto;
+}
+
 .container {
   max-width: 1150px;
   margin: 0 auto;
   padding: 0 40px;
 }
 
-.container .divider {
+.publications-container {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.container .divider,
+.publications-container .divider {
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -50,7 +99,8 @@ body {
   padding: 10px;
 }
 
-.container .divider .divider-content {
+.container .divider .divider-content,
+.publications-container .divider .divider-content {
   display: block;
   justify-self: center;
   text-align: center;
@@ -58,7 +108,8 @@ body {
 }
 
 
-.container .divider .divider-content .div {
+.container .divider .divider-content .div,
+.publications-container .divider .divider-content .div {
   align-items: initial;
   display: inline-block;
   /* background-color: rgb(106, 72, 234); */
@@ -228,7 +279,7 @@ body {
   display: inline;
   margin: 0;
   position: relative;
-  left: -39px;
+  left: -30px;
   background-image: linear-gradient(to right, #d66868, #794BC4);
   -webkit-background-clip: text;
   background-clip: text;
@@ -268,7 +319,7 @@ body {
 }
 
 .home-container .description {
-  margin: 60px 0;
+  margin: 4rem 0;
   font-size: 1.3em;
   font-family: 'Open Sans', sans-serif;
 }
@@ -392,6 +443,20 @@ a:hover {
   -webkit-background-clip: text;
   background-clip: text;
   text-transform: uppercase;
+  width: 15rem;
+  position: relative;
+  margin: 0 auto;
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.section-title svg {
+  position: absolute;
+  top: 50%;
+  left: 50;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.2;
 }
 /* 
 .section-title::after {
@@ -739,7 +804,7 @@ svg:not(:root).svg-inline--fa {
 div.icon-container {
   width: 100%;
   max-width: 20px;
-  left: 80%;
+  left: 90%;
   position: fixed;
   bottom: 2%;
   display: none;
@@ -756,6 +821,109 @@ div.icon-container .scrollup i.fas {
   /* color: #92aaf9; */
   color: #000;
   opacity: 0.7;
+}
+
+.card {
+  box-shadow: 0 2px 10px rgba(50,50,93,.1);
+  overflow: hidden;
+}
+
+.card.card-1,
+.card.card-4 {
+  border-bottom: 4px solid #626ee3;
+}
+
+.card.card-2,
+.card.card-5 {
+  border-bottom: 4px solid #3E8EC8;
+}
+
+.card.card-3,
+.card.card-6 {
+  border-bottom: 4px solid #EA4444;
+}
+
+.card .card-image {
+  height: 20rem !important;
+  background-size: cover;
+  background-blend-mode: screen;
+  --webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.card .card-image.card-image-1 {
+  background-image: linear-gradient(to right bottom, #747fe0, #626ee3), url("../img/Pub1.png");
+}
+
+.card .card-image.card-image-2 {
+  background-image: linear-gradient(to right bottom, #3E8EC8, #3e8ec8d7), url("../img/Pub2.png");
+}
+
+.card .card-image.card-image-3 {
+  background-image: linear-gradient(to right bottom, #EA4444, #FCE7E4), url("../img/Pub3.png");
+}
+
+.card .card-image.card-image-4 {
+  background-image: linear-gradient(to right bottom, #747fe0, #626ee3), url("../img/Pub4.png");
+}
+
+.card .card-image.card-image-5 {
+  background-image: linear-gradient(to right bottom, #3E8EC8, #3e8ec8d7), url("../img/Pub5.png");
+}
+
+.card .card-image.card-image-6 {
+  background-image: linear-gradient(to right bottom, #EA4444, #FCE7E4), url("../img/Pub6.png");
+}
+
+.card .card-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fff;
+  position: absolute;
+  top: 16.5rem;
+  right: 2.5rem;
+  text-align: right;
+  width: 85%;
+}
+
+.card .card-title a {
+  color: #fff;
+}
+
+.card .span-title {
+  padding: 0.4rem 1.3rem;
+  line-height: 2rem;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.card .span-title.span-title-1,
+.card .span-title.span-title-4 {
+  background-image: linear-gradient(to right bottom, #747fe0c6, #626fe3c4);
+}
+
+.card .span-title.span-title-2,
+.card .span-title.span-title-5 {
+  background-image: linear-gradient(to right bottom, #3E8EC8, #3e8ec8d7);
+}
+
+.card .span-title.span-title-3,
+.card .span-title.span-title-6 {
+  background-image: linear-gradient(to right bottom, #EA4444, #FCE7E4)
+}
+
+.card .card-body {
+  height: 18rem;
+  margin-top: 2.8rem;
+  text-align: justify;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card .card-body a {
+  margin-top: auto;
 }
 
 @media (max-width: 1700px) {
@@ -881,14 +1049,22 @@ div.icon-container .scrollup i.fas {
 
   .navbar-container {
     background: transparent;
-    justify-content: start;
+    justify-content: center;
     position: sticky;
+    height: auto;
+  }
+
+  .navbar-container nav {
+    height: 100%;
+    width: 100%;
   }
 
   .navbar-container .navbar {
     flex-direction: column;
     width: auto;
-    align-items: flex-start;
+    align-items: center;
+    padding: 0;
+    text-align: center;
   }
 
   .navbar-container .navbar a:hover,
@@ -903,12 +1079,14 @@ div.icon-container .scrollup i.fas {
   }
   
   .navbar-container .navbar a {
-    background: #fff;
     box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-    padding: 5px 20px;
-    color: black;
-    margin-bottom: 10px;
-    border-radius: 0 15px 15px 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    background-image: linear-gradient(to right, #d66868, #794BC4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
   }
 
   .contact-links a.email {
@@ -935,7 +1113,7 @@ div.icon-container .scrollup i.fas {
   }
 
   .hero-container .title p {
-    left: -23px;
+    left: -21px;
   }
 
   .contact-links {
@@ -949,19 +1127,31 @@ div.icon-container .scrollup i.fas {
   .contact-links-mobile a img {
     width: 40px;
   }
+
+  .contact .contact-form form {
+    height: auto;
+    width: 100%;
+    padding: 4rem 2rem;
+  }
+
+  .card {
+    padding: 0;
+  }
+
+  .card .card-title {
+    font-size: 0.88rem;
+  }
+
+  .card .card-body {
+    font-size: 0.9rem;
+    margin-top: 2rem;
+  }
+
+  .projects {
+    --webkit-clip-path: unset;
+    clip-path: unset;
+    padding: 7rem 0;
+  }
 }
 
 
-.card {
-  box-shadow: 0 2px 10px rgba(50,50,93,.1);
-  border-bottom: 4px solid #626ee3;
-}
-
-.card .card-image {
-  height: 220px !important;
-}
-
-.card .card-image img {
-  width: 100% !important;
-  height: 100% !important;
-}
